@@ -7,7 +7,7 @@ function Movie(props) {
   const [watchCount, setWatchCount] = useState(0);
   const [personalNote, setPersonalNote] = useState(0);
 
-  // Average evaluation
+
   const stars = [];
   for (let i = 0; i < 10; i++) {
     let style = {};
@@ -17,7 +17,6 @@ function Movie(props) {
     stars.push(<FontAwesomeIcon key={i} icon={faStar} style={style} />);
   }
 
-  // Watch movie
   const handleWatchMovie = () => {
     setWatchCount(watchCount + 1);
   };
@@ -26,7 +25,7 @@ function Movie(props) {
     videoIconStyle = { 'color': '#e74c3c', 'cursor': 'pointer' };
   }
 
-  // Like movie
+
   const handleLikeMovie = () => {
     props.updateLikedMovies(props.title);
   };
@@ -35,7 +34,6 @@ function Movie(props) {
     heartIconStyle = { 'color': '#e74c3c', 'cursor': 'pointer' };
   }
 
-  // Personal note
   const personalStars = [];
   for (let i = 0; i < 10; i++) {
     let style = { 'cursor': 'pointer' };
